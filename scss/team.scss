@@ -1,0 +1,119 @@
+@import "compass/css3";
+
+.staff-container{
+
+    @include display-flex;
+    @include flex-wrap(wrap);
+
+    .staff{
+        width: 250px;
+        height: 250px;
+
+        .staff-picture{
+            width: 240px;
+            height: 240px;
+
+            @include box-shadow(rgba(42,45,56,0.4) 0px 0px 5px);
+            opacity: 0.7;
+            @include transition (opacity 0.3s);
+            
+            .img-staff{
+                display: block;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .staff-picture:hover{
+            opacity: 1;
+        }
+    }
+
+    .staff-card{
+        width: 750px;
+        @include display-flex;
+        @include flex-flow(wrap);
+        @include justify-content(space-between);
+        .staff-picture{
+            display: block;
+            opacity: 1!important;
+        }        
+        .staff-text{
+            display: block;
+            width: 480px;
+            height: 250px;
+            .staff-p{
+                padding: 5px;
+                overflow: visible;
+                font-weight: 400;
+                font-family: 'Mukta Mahee', sans-serif;
+            }
+            .staff-p-work{
+                color: #555555;
+                font-size: 20px;
+                font-weight: 500;
+                text-align: center;
+            }
+            .staff-p-slogan{
+                padding-left: 20px;
+                font-style: italic;
+                background-color: rgba(245, 245, 245, 0.8);
+                @include border-radius(5px);
+
+            }
+            .staff-p-name{
+                font-size: 24px;
+                text-align: center;
+            }
+            .staff-p-label{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.ui.card{
+    margin: 20px auto;
+    .content{
+        display: block;
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width : 1280px){
+    .min{
+        display: none;
+    }
+    .max{
+        display: block;
+    }
+}
+
+@media screen and (min-width : 850px) and (max-width:1280px){
+    .min{
+        display: none;
+    }
+    .max{
+        display: block;
+    }
+}
+
+@media screen and (min-width : 450px) and (max-width:850px){
+    .min{
+        display: block;
+    }
+    .max{
+        display: none;
+    }
+}
+
+@media screen and (max-width:450px){
+    .min{
+        display: block;
+    }
+    .max{
+        display: none;
+    }
+}
