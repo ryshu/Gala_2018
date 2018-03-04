@@ -155,7 +155,7 @@ body .content {
 }
 /* line 135, ../scss/default.scss */
 body footer {
-  margin: auto;
+  margin: 50px auto;
 }
 /* line 137, ../scss/default.scss */
 body footer .column a {
